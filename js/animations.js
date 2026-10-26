@@ -100,7 +100,7 @@ document.fonts.ready.then(() => {
     enter('.insta', [
       ['.insta h2', blurIn],
       ['.insta .link', {}, 0.1],
-      ['.insta__grid a', { y: 30, scale: 0.96, stagger: 0.06 }, 0.2],
+      ['.insta__grid .reel', { y: 40, stagger: 0.08 }, 0.2],
     ]);
 
     enter('.contact', [
@@ -117,8 +117,9 @@ document.fonts.ready.then(() => {
 
   // Instagram-embeds laden later en worden dan hoger: posities opnieuw berekenen
   let refreshTimer;
-  new ResizeObserver(() => {
+  const ro = new ResizeObserver(() => {
     clearTimeout(refreshTimer);
     refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 300);
-  }).observe(document.getElementById('reels-grid'));
+  });
+  ['reels-grid', 'posts-grid'].forEach(id => ro.observe(document.getElementById(id)));
 });
