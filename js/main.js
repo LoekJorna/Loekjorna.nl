@@ -24,7 +24,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.15 });
 
-document.querySelectorAll('.section, .stats').forEach(el => {
+document.querySelectorAll('.about, .socials-grid, .gallery, .cards, .contact .wrap').forEach(el => {
   el.classList.add('reveal');
   observer.observe(el);
 });
