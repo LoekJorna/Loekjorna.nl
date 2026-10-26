@@ -8,7 +8,7 @@ const REELS = [
 ];
 
 const reelsGrid = document.getElementById('reels-grid');
-const fallbackImgs = ['assets/img/g4.jpg', 'assets/img/g6.jpg', 'assets/img/g3.jpg'];
+const fallbackImgs = ['assets/img/hal-1.jpg', 'assets/img/hal-klimmen.jpg', 'assets/img/hal-2.jpg'];
 
 if (REELS.length) {
   REELS.slice(0, 3).forEach(url => {
@@ -30,6 +30,12 @@ if (REELS.length) {
         <img src="${src}" alt="Bekijk de reels van Loek op Instagram" loading="lazy"></a>`);
   });
 }
+
+// ===== Navigatie: donkere balk zodra je voorbij de hero scrollt =====
+const nav = document.querySelector('.nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 80);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
 // Jaartal in footer
 document.getElementById('year').textContent = new Date().getFullYear();
