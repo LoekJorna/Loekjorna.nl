@@ -4,48 +4,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Loek Jorna — Climbing & Bouldering</title>
-  <meta name="description" content="Loek Jorna maakt content over klimmen, boulderen en sport. Volg de sends op TikTok en Instagram of werk samen.">
+  <meta name="description" content="Loek Jorna maakt content over klimmen, boulderen en sport. Bekijk de nieuwste reels of werk samen.">
   <meta property="og:title" content="Loek Jorna — Climbing & Bouldering">
-  <meta property="og:image" content="assets/img/hero.jpg">
+  <meta property="og:image" content="assets/img/over.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Permanent+Marker&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter+Tight:wght@400;500;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Herbruikbare stickers -->
+  <!-- Logo-symbool (zoals bij Trailbound) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <symbol id="star" viewBox="0 0 100 100">
-        <path d="M50 4l13 31 33 3-25 22 8 33-29-18-29 18 8-33L4 38l33-3z" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
-      </symbol>
-      <symbol id="flower" viewBox="0 0 100 100">
-        <g stroke="#111" stroke-width="4">
-          <circle cx="50" cy="22" r="20"/><circle cx="78" cy="42" r="20"/><circle cx="67" cy="76" r="20"/>
-          <circle cx="33" cy="76" r="20"/><circle cx="22" cy="42" r="20"/>
-          <circle cx="50" cy="50" r="15" fill="#ff8a00"/>
-        </g>
-      </symbol>
-      <symbol id="smiley" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="46" stroke="#111" stroke-width="4"/>
-        <ellipse cx="36" cy="40" rx="6" ry="10" fill="#111"/><ellipse cx="64" cy="40" rx="6" ry="10" fill="#111"/>
-        <path d="M28 60q22 22 44 0" fill="none" stroke="#111" stroke-width="5" stroke-linecap="round"/>
-      </symbol>
-    </defs>
+    <symbol id="burst" viewBox="0 0 100 100">
+      <g fill="currentColor">
+        <circle cx="50" cy="12" r="9"/>
+        <rect x="45" y="30" width="10" height="70" rx="5" transform="rotate(0 50 65)"/>
+        <rect x="45" y="30" width="10" height="70" rx="5" transform="rotate(60 50 65)"/>
+        <rect x="45" y="30" width="10" height="70" rx="5" transform="rotate(-60 50 65)"/>
+      </g>
+    </symbol>
   </svg>
 
   <!-- NAVIGATIE -->
   <header class="nav">
-    <a href="#top" class="nav__logo">LOEK<span>★</span></a>
+    <a href="#top" class="nav__logo"><svg><use href="#burst"/></svg>LOEK JORNA</a>
     <button class="nav__toggle" aria-label="Menu openen" aria-expanded="false">
-      <span></span><span></span><span></span>
+      <span></span><span></span>
     </button>
     <nav class="nav__links">
       <a href="#over">Over mij</a>
-      <a href="#content">Content</a>
+      <a href="#reels">Reels</a>
       <a href="#samenwerken">Samenwerken</a>
-      <a href="#contact" class="btn btn--small">Contact</a>
+      <a href="#contact" class="pill">Contact</a>
     </nav>
   </header>
 
@@ -53,133 +44,104 @@
 
     <!-- HERO -->
     <section class="hero">
-      <p class="hero__meta hero__meta--left">"NEVER<br>GIVE UP"</p>
-      <p class="hero__meta hero__meta--right">CLIMBING<br>BOULDERING<br>SPORT</p>
-
-      <h1 class="hero__title" aria-label="Loek Jorna">
-        <span class="hero__back">LOEK</span>
-        <img class="hero__photo" src="assets/img/hero.jpg" alt="Loek aan het boulderen in het bos">
-        <span class="hero__front">JORNA</span>
-      </h1>
-
-      <p class="hero__script">Chalk up. Send it. Do it now.</p>
-
-      <div class="hero__actions">
-        <a href="https://www.tiktok.com/@loek.jorna" target="_blank" rel="noopener" class="btn">TikTok</a>
-        <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener" class="btn btn--pink">Instagram</a>
+      <img class="hero__bg" src="assets/img/over.jpg" alt="Loek zittend op een boulder in het bos">
+      <div class="hero__top">
+        <span>CLIMB <em>for</em> FUN</span>
+        <span class="pill pill--light">NL</span>
+        <span>SEND <em>the</em> STONE</span>
       </div>
-
-      <svg class="sticker sticker--spin" style="--c:#ffd400; top:16%; right:6%; width:clamp(70px,10vw,130px)"><use href="#star"/></svg>
-      <svg class="sticker sticker--wobble" style="--c:#ff8fd0; top:52%; left:4%; width:clamp(60px,9vw,120px)"><use href="#flower"/></svg>
-      <svg class="sticker sticker--bob" style="--c:#ffd400; bottom:8%; right:10%; width:clamp(55px,7vw,95px)"><use href="#smiley"/></svg>
+      <div class="hero__center">
+        <svg class="hero__burst"><use href="#burst"/></svg>
+        <h1>LOEK JORNA</h1>
+        <p class="hero__sub">CLIMB · CREATE · REPEAT</p>
+      </div>
+      <a href="#over" class="hero__scroll">SCROLL ↓</a>
     </section>
 
-    <!-- LOOPBAND -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>SEND IT ★ CHALK UP ★ NEVER GIVE UP ★ ONE MORE GO ★ DO IT NOW ★&nbsp;</span>
-        <span>SEND IT ★ CHALK UP ★ NEVER GIVE UP ★ ONE MORE GO ★ DO IT NOW ★&nbsp;</span>
-      </div>
-    </div>
-
-    <!-- OVER MIJ -->
-    <section id="over" class="band band--red">
-      <div class="wrap about">
-        <div class="about__img">
-          <img src="assets/img/over.jpg" alt="Loek zittend op een boulder in het bos">
-          <svg class="sticker sticker--spin" style="--c:#ffd400; top:-30px; right:-25px; width:90px"><use href="#star"/></svg>
-        </div>
-        <div class="about__text">
-          <p class="tag">Over mij</p>
-          <h2>Hoi, ik ben <span class="hl hl--yellow">Loek!</span></h2>
-          <p>Ik klim, ik boulder en ik neem je overal mee naartoe: van de hal tot de rotsen in het bos. Ik laat zien hoe het écht gaat, met de tips, de fails, de sends en alles daartussen.</p>
+    <!-- STATEMENT / OVER MIJ -->
+    <section id="over" class="statement">
+      <div class="statement__text">
+        <p class="statement__small">work hard but,</p>
+        <h2 class="statement__big">enjoy the climb too.</h2>
+        <div class="statement__body">
+          <p>Hoi, ik ben Loek. Ik klim, ik boulder en ik neem je overal mee naartoe: van de hal tot de rotsen in het bos. Ik laat zien hoe het écht gaat, met de tips, de fails, de sends en alles daartussen.</p>
           <p>Op mijn kanalen beantwoord ik jullie klimvragen, test ik nieuwe gear en praat ik over het sportnieuws waar iedereen het over heeft.</p>
-          <p class="scribble">— see you on the wall ✌</p>
         </div>
+      </div>
+      <img class="statement__img" src="assets/img/portret.jpg" alt="Portret van Loek in een grijze hoodie">
+    </section>
+
+    <!-- REELS -->
+    <section id="reels" class="reels">
+      <div class="poster-title">
+        <span class="poster-title__row">NIEUWSTE</span>
+        <span class="poster-title__script">fresh</span>
+        <span class="poster-title__row">REELS</span>
+      </div>
+      <p class="label">DE LAATSTE DRIE VIDEO'S VAN @LOEKJORNA</p>
+
+      <!-- De reels worden gevuld door js/main.js (zie REELS bovenaan dat bestand) -->
+      <div class="reels__grid" id="reels-grid"></div>
+
+      <div class="reels__cta">
+        <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener" class="pill pill--orange">Volg op Instagram</a>
+        <a href="https://www.tiktok.com/@loek.jorna" target="_blank" rel="noopener" class="pill">Volg op TikTok</a>
       </div>
     </section>
 
-    <!-- CONTENT -->
-    <section id="content" class="band band--yellow">
-      <div class="wrap">
-        <p class="tag tag--dark">Content</p>
-        <h2 class="title-red">Volg de <span class="hl hl--blue">sends</span></h2>
-
-        <div class="socials-grid">
-          <a class="social-card social-card--blue" href="https://www.tiktok.com/@loek.jorna" target="_blank" rel="noopener">
-            <img src="assets/img/tiktok.jpg" alt="Loek hangt ondersteboven aan een boulder">
-            <div class="social-card__text">
-              <span class="social-card__platform">TikTok</span>
-              <span class="social-card__handle">@loek.jorna</span>
-              <span class="social-card__cta">Bekijk video's →</span>
-            </div>
-          </a>
-          <a class="social-card social-card--pink" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener">
-            <img src="assets/img/insta.jpg" alt="Loek bij een boulder, van achteren gezien">
-            <div class="social-card__text">
-              <span class="social-card__platform">Instagram</span>
-              <span class="social-card__handle">@loekjorna</span>
-              <span class="social-card__cta">Volg mij →</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="gallery">
-          <img src="assets/img/g1.jpg" alt="Loek klimt met een spotter eronder" loading="lazy">
-          <img src="assets/img/g2.jpg" alt="Loek reikt naar een greep" loading="lazy">
-          <img src="assets/img/g3.jpg" alt="Loek van bovenaf gezien tijdens het klimmen" loading="lazy">
-          <img src="assets/img/g4.jpg" alt="Loek bestudeert een boulder" loading="lazy">
-          <img src="assets/img/g5.jpg" alt="Loek in een grijze hoodie bij de crashpads" loading="lazy">
-          <img src="assets/img/g6.jpg" alt="Loek staat voor een boulder" loading="lazy">
-        </div>
+    <!-- FULL-BLEED FOTO -->
+    <section class="bleed">
+      <img src="assets/img/g7.jpg" alt="Loek reikt naar een greep in de schaduw" loading="lazy">
+      <div class="bleed__text">
+        <p class="label label--light">ONE MORE GO</p>
+        <p class="bleed__quote">Elke poging telt.</p>
       </div>
+    </section>
+
+    <!-- GALERIJ -->
+    <section class="gallery">
+      <figure><img src="assets/img/hero.jpg" alt="Loek reikt naar een greep op een grote boulder" loading="lazy"><figcaption>01 — REACH</figcaption></figure>
+      <figure><img src="assets/img/tiktok.jpg" alt="Loek hangt ondersteboven met een heel hook" loading="lazy"><figcaption>02 — HEEL HOOK</figcaption></figure>
+      <figure><img src="assets/img/insta.jpg" alt="Loek van achteren bij een boulder" loading="lazy"><figcaption>03 — READING THE LINE</figcaption></figure>
+      <figure><img src="assets/img/g3.jpg" alt="Loek van bovenaf gezien tijdens het klimmen" loading="lazy"><figcaption>04 — FROM ABOVE</figcaption></figure>
+      <figure><img src="assets/img/g1.jpg" alt="Loek klimt met een spotter eronder" loading="lazy"><figcaption>05 — SPOTTED</figcaption></figure>
+      <figure><img src="assets/img/g5.jpg" alt="Loek in een grijze hoodie bij de crashpads" loading="lazy"><figcaption>06 — REST DAY</figcaption></figure>
     </section>
 
     <!-- SAMENWERKEN -->
-    <section id="samenwerken" class="band band--blue">
-      <div class="wrap">
-        <p class="tag">Voor merken</p>
-        <h2>Laten we <span class="hl hl--red">samenwerken</span></h2>
-        <p class="lead">Ik bereik een betrokken publiek van klimmers, boulderaars en sportfans. Samen maken we content die niet voelt als reclame.</p>
-        <div class="cards">
-          <div class="card" style="--tilt:-2deg; --c:#ffd400">
-            <span class="card__num">01</span>
-            <h3>Gesponsorde video's</h3>
-            <p>Je product echt getest aan de wand, in mijn eigen stijl.</p>
-          </div>
-          <div class="card" style="--tilt:1.5deg; --c:#ff8fd0">
-            <span class="card__num">02</span>
-            <h3>Gear reviews</h3>
-            <p>Eerlijke reviews van klimschoenen, chalk, kleding en meer.</p>
-          </div>
-          <div class="card" style="--tilt:-1deg; --c:#ff3b2f">
-            <span class="card__num">03</span>
-            <h3>Hallen & events</h3>
-            <p>Content over jouw boulderhal, wedstrijd of event.</p>
-          </div>
-        </div>
+    <section id="samenwerken" class="collab">
+      <div class="collab__head">
+        <p class="label">VOOR MERKEN</p>
+        <h2 class="wide">LET'S <span class="script">work</span> TOGETHER</h2>
+        <p class="collab__lead">Ik bereik een betrokken publiek van klimmers, boulderaars en sportfans. Samen maken we content die niet voelt als reclame.</p>
       </div>
+      <ol class="collab__list">
+        <li><span class="num">01</span><div><h3>Gesponsorde video's</h3><p>Je product echt getest aan de wand, in mijn eigen stijl.</p></div></li>
+        <li><span class="num">02</span><div><h3>Gear reviews</h3><p>Eerlijke reviews van klimschoenen, chalk, kleding en meer.</p></div></li>
+        <li><span class="num">03</span><div><h3>Hallen & events</h3><p>Content over jouw boulderhal, wedstrijd of event.</p></div></li>
+      </ol>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="band band--pink contact">
-      <svg class="sticker sticker--spin" style="--c:#ffd400; top:12%; left:8%; width:clamp(60px,8vw,110px)"><use href="#star"/></svg>
-      <svg class="sticker sticker--wobble" style="--c:#2b4bff; bottom:14%; right:7%; width:clamp(60px,8vw,110px)"><use href="#flower"/></svg>
-      <div class="wrap">
-        <h2 class="contact__title">Let's<br>send it!</h2>
-        <p class="contact__text">Samenwerken, een vraag of gewoon hoi zeggen? Stuur me een DM.</p>
-        <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener" class="btn btn--big">DM op Instagram</a>
+    <section id="contact" class="contact">
+      <img class="contact__bg" src="assets/img/g2.jpg" alt="" loading="lazy">
+      <div class="contact__inner">
+        <p class="label label--light">CONTACT</p>
+        <h2 class="wide">GET <span class="script">in</span> TOUCH</h2>
+        <a href="mailto:loekjornamarketing@gmail.com" class="pill pill--big">loekjornamarketing@gmail.com</a>
+        <div class="contact__socials">
+          <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener">INSTAGRAM</a>
+          <a href="https://www.tiktok.com/@loek.jorna" target="_blank" rel="noopener">TIKTOK</a>
+        </div>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Loek Jorna</p>
-    <div class="footer__links">
-      <a href="https://www.tiktok.com/@loek.jorna" target="_blank" rel="noopener">TikTok</a>
-      <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener">Instagram</a>
-    </div>
+    <span><svg><use href="#burst"/></svg>LOEK JORNA</span>
+    <span>© <span id="year"></span></span>
+    <span>GO BEYOND</span>
   </footer>
 
   <script src="js/main.js"></script>

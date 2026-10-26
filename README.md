@@ -11,10 +11,8 @@ Persoonlijke creator-site over klimmen en boulderen. Gemaakt met gewone HTML, CS
 ## Zelf aanpassen
 - **Teksten:** zoek in `index.html` naar de tekst die je wilt veranderen en vervang hem.
 - **Foto's:** zet ze in `assets/img/` met deze namen:
-  - `hero.jpg`: grote foto bovenaan (liggend, minstens 1920px breed)
-  - `portret.jpg`: foto bij "Over mij" (staand)
-  - `video1.jpg`, `video2.jpg`, `video3.jpg`: thumbnails van je video's (staand, 9:16)
-- **Socials en e-mail:** vervang `JOUW_HANDLE` en `JOUW@EMAIL.NL` in `index.html`.
+  - Zet nieuwe foto's in `assets/img/` en verwijs ernaar in `index.html`.
+- **Laatste 3 reels:** plak de links van je nieuwste reels bovenaan in `js/main.js` (bij `REELS`), nieuwste eerst.
 
 ## Lokaal bekijken
 ```bash
