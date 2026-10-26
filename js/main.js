@@ -44,20 +44,5 @@ const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > window.
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-// ===== Fade-in bij scrollen =====
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll('.statement__text, .poster-title, .reels__grid, .gallery figure, .collab__head, .collab__list, .contact__inner').forEach(el => {
-  el.classList.add('reveal');
-  observer.observe(el);
-});
-
 // Jaartal in footer
 document.getElementById('year').textContent = new Date().getFullYear();

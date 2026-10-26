@@ -208,13 +208,11 @@ body::after {
 .footer > span:first-child { display: flex; align-items: center; gap: .5rem; font-family: var(--wide); font-variation-settings: 'wdth' 125; font-weight: 900; }
 .footer svg { width: 16px; height: 16px; }
 
-/* ===== Fade-in bij scrollen ===== */
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity .9s, transform .9s; }
-.reveal.visible { opacity: 1; transform: none; }
+/* ===== Animaties (zie js/animations.js) ===== */
+.anim-loading .nav, .anim-loading .hero__center, .anim-loading .hero__top, .anim-loading .hero__scroll { visibility: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .reveal { opacity: 1; transform: none; }
 }
 
 /* ===== Mobiel ===== */
