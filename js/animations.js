@@ -42,6 +42,33 @@ document.fonts.ready.then(() => {
       scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom 20%', scrub: true },
     });
 
+    // ----- Bereik: tellers lopen op tot het echte getal -----
+    const statsTitle = SplitText.create('.stats h2', { type: 'words', mask: 'words' });
+    gsap.timeline({ scrollTrigger: { trigger: '.stats', start: 'top 70%' } })
+      .from('.stats .label', { autoAlpha: 0, y: 15, duration: 0.6 })
+      .from(statsTitle.words, { yPercent: 110, duration: 1, stagger: 0.1, ease: 'power4.out' }, 0.1);
+
+    gsap.utils.toArray('.stat__num').forEach((el, i) => {
+      const target = parseFloat(el.dataset.count);
+      const decimals = parseInt(el.dataset.decimals || 0, 10);
+      const suffix = el.dataset.suffix || '';
+      const counter = { val: 0 };
+      const render = () => {
+        el.textContent = counter.val.toLocaleString('nl-NL', {
+          minimumFractionDigits: decimals, maximumFractionDigits: decimals,
+        }) + suffix;
+      };
+      render();
+      gsap.to(counter, {
+        val: target, duration: 2.2, delay: i * 0.12, ease: 'power3.out', onUpdate: render,
+        scrollTrigger: { trigger: '.stats__grid', start: 'top 80%' },
+      });
+      gsap.from(el.parentElement, {
+        autoAlpha: 0, y: 40, duration: 1, delay: i * 0.12, ease: 'power3.out',
+        scrollTrigger: { trigger: '.stats__grid', start: 'top 80%' },
+      });
+    });
+
     // ----- 2. Statement / over mij -----
     const bigLine = SplitText.create('.statement__big', { type: 'words', mask: 'words' });
     gsap.timeline({ scrollTrigger: { trigger: '.statement', start: 'top 70%' } })
@@ -79,31 +106,28 @@ document.fonts.ready.then(() => {
       .from('.bleed .label', { autoAlpha: 0, y: 15, duration: 0.6 })
       .from(quote.chars, { yPercent: 110, duration: 0.8, stagger: 0.025, ease: 'power4.out' }, 0.1);
 
-    // ----- 5. Galerij: foto's onthullen per rij -----
-    gsap.set('.gallery figure', { clipPath: 'inset(0 0 100% 0)' });
-    ScrollTrigger.batch('.gallery figure', {
-      start: 'top 88%',
+    // ----- 5. Instagram-feed: foto's onthullen als een gordijn -----
+    gsap.set('.insta__grid a', { clipPath: 'inset(0 0 100% 0)' });
+    ScrollTrigger.batch('.insta__grid a', {
+      start: 'top 90%',
       once: true,
       onEnter: batch => gsap.to(batch, {
-        clipPath: 'inset(0 0 0% 0)', duration: 1.2, stagger: 0.12, ease: 'power4.inOut',
+        clipPath: 'inset(0 0 0% 0)', duration: 1.1, stagger: 0.1, ease: 'power4.inOut',
       }),
     });
-    if (desktop) {
-      // Middelste kolom beweegt iets sneller: subtiele diepte
-      gsap.utils.toArray('.gallery figure:nth-child(3n+2)').forEach(fig => {
-        gsap.to(fig, {
-          y: -60, ease: 'none',
-          scrollTrigger: { trigger: '.gallery', start: 'top bottom', end: 'bottom top', scrub: true },
-        });
-      });
-    }
+    const instaTitle = SplitText.create('.insta h2', { type: 'chars', mask: 'chars' });
+    gsap.from(instaTitle.chars, {
+      yPercent: 110, duration: 0.9, stagger: 0.03, ease: 'power4.out',
+      scrollTrigger: { trigger: '.insta', start: 'top 75%' },
+    });
 
     // ----- 6. Samenwerken -----
     const collabTitle = SplitText.create('.collab h2', { type: 'words', mask: 'words' });
     gsap.timeline({ scrollTrigger: { trigger: '.collab', start: 'top 70%' } })
       .from('.collab .label', { autoAlpha: 0, y: 15, duration: 0.6 })
       .from(collabTitle.words, { yPercent: 110, duration: 1, stagger: 0.1, ease: 'power4.out' }, 0.1)
-      .from('.collab__lead', { autoAlpha: 0, y: 25, duration: 0.8 }, 0.5);
+      .from('.collab__lead', { autoAlpha: 0, y: 25, duration: 0.8 }, 0.5)
+      .from('.collab__cta', { autoAlpha: 0, y: 20, duration: 0.7 }, 0.7);
     gsap.from('.collab__list li', {
       autoAlpha: 0, x: 60, duration: 0.9, stagger: 0.15, ease: 'power3.out',
       scrollTrigger: { trigger: '.collab__list', start: 'top 80%' },
@@ -152,4 +176,11 @@ document.fonts.ready.then(() => {
 
   // Posities opnieuw berekenen zodra alle foto's geladen zijn
   window.addEventListener('load', () => ScrollTrigger.refresh());
+
+  // Instagram-embeds laden later en worden dan hoger: posities opnieuw berekenen
+  let refreshTimer;
+  new ResizeObserver(() => {
+    clearTimeout(refreshTimer);
+    refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 300);
+  }).observe(document.getElementById('reels-grid'));
 });

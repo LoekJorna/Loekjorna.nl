@@ -35,7 +35,7 @@ body::after {
 }
 
 /* Analoge filmlook voor foto's */
-.hero__bg, .bleed img, .gallery img, .statement__img, .contact__bg {
+.hero__bg, .bleed img, .statement__img, .contact__bg {
   filter: contrast(1.06) saturate(1.12) sepia(.08);
 }
 
@@ -155,9 +155,10 @@ body::after {
 .poster-title__row { font-size: clamp(3.2rem, 13vw, 11rem); }
 .poster-title__script { font-size: clamp(3rem, 11vw, 9rem); line-height: .6; margin: -.05em 0 -.02em; position: relative; z-index: 1; transform: rotate(-6deg); }
 .reels .label { margin-bottom: 3.5rem; opacity: .7; }
-.reels__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1150px; margin: 0 auto 3rem; }
+.reels__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(326px, 1fr)); gap: 1.5rem; max-width: 1150px; margin: 0 auto 3rem; align-items: start; }
 .reel { border-radius: 6px; overflow: hidden; background: #fff; box-shadow: 0 20px 40px -20px rgba(0,0,0,.35); }
-.reel iframe { display: block; width: 100%; height: 640px; border: 0; }
+.reel .instagram-media { margin: 0 !important; min-width: 0 !important; width: 100% !important; border-radius: 6px !important; }
+.reel iframe { display: block; }
 .reel--placeholder { position: relative; aspect-ratio: 9 / 16; background: var(--ink); }
 .reel--placeholder img { width: 100%; height: 100%; object-fit: cover; opacity: .7; transition: opacity .3s, transform .5s; }
 .reel--placeholder:hover img { opacity: .9; transform: scale(1.04); }
@@ -171,22 +172,40 @@ body::after {
 .bleed__text { position: absolute; left: clamp(1.25rem, 5vw, 4rem); bottom: clamp(2rem, 6vw, 4rem); color: var(--cream); }
 .bleed__quote { font-family: var(--script); font-style: italic; font-weight: 700; font-size: clamp(2.5rem, 7vw, 6rem); line-height: 1; }
 
-/* ===== Galerij ===== */
-.gallery {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(.75rem, 2vw, 1.5rem);
-  padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 4rem);
-  max-width: 1400px; margin: 0 auto;
+/* ===== Bereik in cijfers ===== */
+.stats { background: var(--ink); color: var(--cream); padding: clamp(5rem, 10vw, 8rem) clamp(1.25rem, 5vw, 4rem); }
+.stats__head { margin-bottom: clamp(3rem, 6vw, 5rem); }
+.stats .label { color: var(--orange); margin-bottom: 1.2rem; }
+.stats h2 { font-size: clamp(2.6rem, 7vw, 6rem); }
+.stats__grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(242,236,223,.25); }
+.stat { padding: 2rem 1.5rem 2rem 0; display: grid; gap: .6rem; }
+.stat + .stat { padding-left: 1.5rem; border-left: 1px solid rgba(242,236,223,.25); }
+.stat__num { font-family: var(--wide); font-weight: 900; font-variation-settings: 'wdth' 125; font-size: clamp(2.6rem, 5.5vw, 5rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat__label { font-weight: 700; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; opacity: .75; }
+.stats__note { margin-top: 2.5rem; font-size: .8rem; letter-spacing: .1em; opacity: .5; }
+
+/* ===== Instagram-feed ===== */
+.insta { padding: clamp(5rem, 10vw, 8rem) clamp(1.25rem, 5vw, 4rem); max-width: 1300px; margin: 0 auto; }
+.insta__head { display: flex; justify-content: space-between; align-items: end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.insta .label { margin-bottom: 1rem; opacity: .7; }
+.insta h2 { font-size: clamp(2.2rem, 6vw, 5rem); }
+.insta__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(4px, .6vw, 8px); }
+.insta__grid a { position: relative; overflow: hidden; aspect-ratio: 1; background: var(--ink); }
+.insta__grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s, opacity .3s; filter: contrast(1.06) saturate(1.12) sepia(.08); }
+.insta__grid a::after {
+  content: 'BEKIJK OP INSTAGRAM'; position: absolute; inset: 0;
+  display: grid; place-items: center;
+  color: var(--cream); font-weight: 800; font-size: .7rem; letter-spacing: .18em;
+  opacity: 0; transition: opacity .3s;
 }
-.gallery figure { overflow: hidden; }
-.gallery img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform .6s; }
-.gallery figure:hover img { transform: scale(1.04); }
-.gallery figcaption { margin-top: .6rem; font-weight: 700; font-size: .7rem; letter-spacing: .18em; }
+.insta__grid a:hover img { transform: scale(1.06); opacity: .55; }
+.insta__grid a:hover::after { opacity: 1; }
 
 /* ===== Samenwerken ===== */
 .collab { background: var(--grass); color: var(--cream); padding: clamp(5rem, 10vw, 8rem) clamp(1.25rem, 5vw, 4rem); display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem, 6vw, 6rem); }
 .collab .label { color: var(--orange); margin-bottom: 1.2rem; }
 .collab h2 { font-size: clamp(2.6rem, 6vw, 5rem); margin-bottom: 2rem; }
-.collab__lead { max-width: 460px; font-size: 1.08rem; opacity: .9; }
+.collab__lead { max-width: 460px; font-size: 1.08rem; opacity: .9; margin-bottom: 2rem; }
 .collab__list { list-style: none; align-self: end; }
 .collab__list li { display: flex; gap: 1.5rem; padding: 1.8rem 0; border-top: 1px solid rgba(242,236,223,.3); }
 .collab__list li:last-child { border-bottom: 1px solid rgba(242,236,223,.3); }
@@ -236,6 +255,8 @@ body::after {
   .statement__text { padding-bottom: 3rem; }
   .statement__img { justify-self: center; max-width: 340px; }
   .reels__grid { grid-template-columns: 1fr; max-width: 400px; }
-  .gallery { grid-template-columns: 1fr 1fr; }
+  .stats__grid { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(3) { padding-left: 0; border-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid rgba(242,236,223,.25); }
   .collab { grid-template-columns: 1fr; }
 }

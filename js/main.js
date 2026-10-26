@@ -2,7 +2,9 @@
 // Plak hier de links van je nieuwste reels (nieuwste eerst).
 // Zolang de lijst leeg is, tonen we foto's die naar je Instagram linken.
 const REELS = [
-  // 'https://www.instagram.com/reel/XXXXXXXXXXX/',
+  'https://www.instagram.com/reel/De1zuY3xsWe/',
+  'https://www.instagram.com/reel/DLR-MgWNsZ2/',
+  'https://www.instagram.com/reel/DakYSXoAOtw/',
 ];
 
 const grid = document.getElementById('reels-grid');
@@ -13,8 +15,14 @@ if (REELS.length) {
     const code = url.match(/\/(?:reel|p)\/([^/?]+)/)?.[1];
     if (!code) return;
     grid.insertAdjacentHTML('beforeend',
-      `<div class="reel"><iframe src="https://www.instagram.com/reel/${code}/embed" loading="lazy" allowfullscreen title="Instagram reel van Loek"></iframe></div>`);
+      `<div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/${code}/" data-instgrm-version="14">
+        <a href="https://www.instagram.com/reel/${code}/" target="_blank" rel="noopener">Bekijk deze reel op Instagram</a></blockquote></div>`);
   });
+  // Officieel Instagram-script: maakt van elke blockquote een afspeelbare reel
+  const s = document.createElement('script');
+  s.src = 'https://www.instagram.com/embed.js';
+  s.async = true;
+  document.body.append(s);
 } else {
   fallbackImgs.forEach(src => {
     grid.insertAdjacentHTML('beforeend',
