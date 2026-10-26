@@ -31,43 +31,6 @@ if (REELS.length) {
   });
 }
 
-// ===== Filmstrip: het frame in het midden licht op =====
-const strip = document.getElementById('strip');
-const frames = [...strip.querySelectorAll('.frame')];
-
-const lightCentre = () => {
-  const mid = strip.getBoundingClientRect().left + strip.clientWidth / 2;
-  let best = frames[0], bestDist = Infinity;
-  frames.forEach(f => {
-    const r = f.getBoundingClientRect();
-    const d = Math.abs(r.left + r.width / 2 - mid);
-    if (d < bestDist) { bestDist = d; best = f; }
-  });
-  frames.forEach(f => f.classList.toggle('is-lit', f === best));
-};
-
-const centreOn = (frame, behavior = 'auto') => {
-  strip.scrollTo({ left: frame.offsetLeft - (strip.clientWidth - frame.offsetWidth) / 2, behavior });
-};
-
-strip.addEventListener('scroll', () => requestAnimationFrame(lightCentre), { passive: true });
-frames.forEach(f => f.addEventListener('click', () => centreOn(f, 'smooth')));
-
-// Pijltjestoetsen als de strip focus heeft
-strip.addEventListener('keydown', e => {
-  if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-  e.preventDefault();
-  const i = frames.findIndex(f => f.classList.contains('is-lit'));
-  const next = frames[Math.max(0, Math.min(frames.length - 1, i + (e.key === 'ArrowRight' ? 1 : -1)))];
-  centreOn(next, 'smooth');
-});
-
-// Start op het hoofdframe, ook als de foto's nog laden
-const lead = strip.querySelector('.frame--lead');
-const startStrip = () => { centreOn(lead); lightCentre(); };
-startStrip();
-window.addEventListener('load', startStrip);
-
 // ===== Niche: korte uitleg bij elk onderwerp =====
 const desc = document.querySelector('.niche__desc');
 document.querySelectorAll('.niche__col li').forEach(li => {

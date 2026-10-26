@@ -10,19 +10,22 @@ document.fonts.ready.then(() => {
   mm.add('(prefers-reduced-motion: no-preference)', () => {
     const rise = { autoAlpha: 0, y: 24, duration: 0.9, ease: 'power3.out' };
 
-    // ----- Hero: sluiter op het hoofdframe -----
-    const lead = document.querySelector('.frame--lead');
-    const others = gsap.utils.toArray('.frame:not(.frame--lead)');
-    const title = SplitText.create('.hero h1', { type: 'lines', mask: 'lines' });
+    // ----- Hero: de foto opent als een sluiter, daarna de naam -----
+    const title = SplitText.create('.hero h1', { type: 'words,chars', mask: 'words' });
 
     gsap.timeline({ defaults: { ease: 'power4.out' } })
-      .fromTo(lead, { clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0% 0 0 0)', duration: 1.1, ease: 'power4.inOut' })
-      .from(lead.querySelector('img'), { scale: 1.12, duration: 1.4 }, 0)
-      .from(others, { autoAlpha: 0, duration: 0.8, stagger: { each: 0.05, from: 'center' } }, 0.5)
-      .from(title.lines, { yPercent: 100, duration: 1, stagger: 0.09 }, 0.3)
-      .from('.hero .lead', rise, 0.6)
-      .from('.hero .button', rise, 0.7)
-      .from('.hero__nav', { autoAlpha: 0, y: -12, duration: 0.8 }, 0.8);
+      .fromTo('.hero__media', { clipPath: 'inset(100% 0 0 0)' }, { clipPath: 'inset(0% 0 0 0)', duration: 1.1, ease: 'power4.inOut' })
+      .from('.hero__media', { scale: 1.12, duration: 1.6 }, 0)
+      .from(title.chars, { yPercent: 100, duration: 1, stagger: 0.04 }, 0.5)
+      .from('.hero .lead', rise, 0.8)
+      .from('.hero .button', rise, 0.9)
+      .from('.hero__nav', { autoAlpha: 0, y: -12, duration: 0.8 }, 1);
+
+    // Foto zakt rustig mee bij scrollen
+    gsap.to('.hero__media', {
+      yPercent: 12, ease: 'none',
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true },
+    });
 
     // ----- Entree per sectie: kop, dan tekst, dan beeld -----
     const enter = (trigger, steps) => {

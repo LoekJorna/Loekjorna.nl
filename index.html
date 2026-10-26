@@ -9,7 +9,7 @@
   <meta property="og:image" content="assets/img/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,25 +26,12 @@
       </div>
     </nav>
 
-    <!-- Filmstrip: het frame in het midden licht op. Scroll of swipe opzij. -->
-    <div class="strip" id="strip" tabindex="0" aria-label="Filmstrip met foto's van Loek, scroll opzij">
-      <figure class="frame"><img src="assets/img/g2.jpg" alt="Loek reikt naar een greep op een grote boulder" width="733" height="1100"><figcaption>De eerste greep</figcaption></figure>
-      <figure class="frame"><img src="assets/img/g4.jpg" alt="Loek bestudeert een boulder" width="733" height="1100"><figcaption>De lijn lezen</figcaption></figure>
-      <figure class="frame"><img src="assets/img/tiktok.jpg" alt="Loek hangt ondersteboven met een heel hook" width="666" height="1000"><figcaption>Heel hook</figcaption></figure>
-      <figure class="frame"><img src="assets/img/g1.jpg" alt="Loek klimt met een spotter eronder" width="879" height="1100"><figcaption>Met spotter</figcaption></figure>
-      <figure class="frame"><img src="assets/img/insta.jpg" alt="Loek van achteren bij een boulder, handen op zijn pet" width="666" height="1000"><figcaption>Nog één poging</figcaption></figure>
-      <figure class="frame frame--lead"><img src="assets/img/hero.jpg" alt="Loek reikt hoog op een boulder in het bos" width="1199" height="1800"><figcaption>Reach</figcaption></figure>
-      <figure class="frame"><img src="assets/img/over.jpg" alt="Loek zit op een boulder in het bos" width="1466" height="2200"><figcaption>Rustmoment</figcaption></figure>
-      <figure class="frame"><img src="assets/img/g3.jpg" alt="Loek van bovenaf gezien tijdens het klimmen" width="733" height="1100"><figcaption>Van bovenaf</figcaption></figure>
-      <figure class="frame"><img src="assets/img/g7.jpg" alt="Loek reikt naar een greep in de schaduw" width="1066" height="1600"><figcaption>Schaduwspel</figcaption></figure>
-      <figure class="frame"><img src="assets/img/g6.jpg" alt="Loek staat voor een boulder" width="733" height="1100"><figcaption>Voor de start</figcaption></figure>
-      <figure class="frame"><img src="assets/img/portret.jpg" alt="Portret van Loek in een grijze hoodie" width="600" height="900"><figcaption>Loek</figcaption></figure>
-      <figure class="frame"><img src="assets/img/g5.jpg" alt="Loek in een grijze hoodie bij de crashpads" width="733" height="1100"><figcaption>Crashpads</figcaption></figure>
-    </div>
+    <!-- Grote foto (straks: video). Vervang door je eigen beeld in assets/img/ -->
+    <img class="hero__media" src="assets/img/over.jpg" alt="Loek zit op een boulder in het bos" width="1466" height="2200" fetchpriority="high">
 
     <div class="hero__foot">
       <div class="hero__intro">
-        <h1 id="top">Loek Jorna,<br>bouldercreator</h1>
+        <h1 id="top">Loek Jorna</h1>
         <p class="lead">Bouldercontent, lifestyle en een beetje tech, voor 84K+ volgers op TikTok en Instagram.</p>
       </div>
       <a href="mailto:loekjornamarketing@gmail.com?subject=Samenwerking%20met%20Loek%20Jorna" class="button">Werk met mij samen</a>
@@ -138,7 +125,7 @@
     <section id="merken" class="brands">
       <div class="brands__board">
         <div class="tile tile--head">
-          <h2>Merken waar ik mee werkte</h2>
+          <h2>Gewerkt met</h2>
         </div>
         <div class="tile"><img src="assets/logos/logitech.svg" alt="Logitech" class="logo logo--logitech"></div>
         <div class="tile"><img src="assets/logos/flexispot.png" alt="Flexispot" class="logo logo--flexispot"></div>
@@ -154,18 +141,18 @@
         <p>Foto's van de rotsen, de hal en alles daartussen. Elke week nieuw op <a class="link" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener">@loekjorna</a>.</p>
       </div>
       <div class="sheet__grid">
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g1.jpg" alt="Loek klimt met een spotter eronder" width="879" height="1100" loading="lazy"><span>Met spotter</span></a>
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g4.jpg" alt="Loek bestudeert een boulder" width="733" height="1100" loading="lazy"><span>De lijn lezen</span></a>
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/tiktok.jpg" alt="Loek hangt ondersteboven met een heel hook" width="666" height="1000" loading="lazy"><span>Heel hook</span></a>
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/over.jpg" alt="Loek zit op een boulder in het bos" width="1466" height="2200" loading="lazy"><span>Rustmoment</span></a>
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/insta.jpg" alt="Loek van achteren bij een boulder" width="666" height="1000" loading="lazy"><span>Nog één poging</span></a>
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g7.jpg" alt="Loek reikt naar een greep in de schaduw" width="1066" height="1600" loading="lazy"><span>Schaduwspel</span></a>
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g2.jpg" alt="Loek reikt naar een greep" width="733" height="1100" loading="lazy"><span>De eerste greep</span></a>
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g5.jpg" alt="Loek bij de crashpads" width="733" height="1100" loading="lazy"><span>Crashpads</span></a>
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g6.jpg" alt="Loek staat voor een boulder" width="733" height="1100" loading="lazy"><span>Voor de start</span></a>
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/hero.jpg" alt="Loek reikt hoog op een boulder" width="1199" height="1800" loading="lazy"><span>Reach</span></a>
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g3.jpg" alt="Loek van bovenaf gezien" width="733" height="1100" loading="lazy"><span>Van bovenaf</span></a>
-        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/portret.jpg" alt="Portret van Loek" width="600" height="900" loading="lazy"><span>Loek</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g1.jpg" alt="Loek klimt met een spotter eronder" width="879" height="1100" loading="lazy"></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g4.jpg" alt="Loek bestudeert een boulder" width="733" height="1100" loading="lazy"></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/tiktok.jpg" alt="Loek hangt ondersteboven met een heel hook" width="666" height="1000" loading="lazy"></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/over.jpg" alt="Loek zit op een boulder in het bos" width="1466" height="2200" loading="lazy"></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/insta.jpg" alt="Loek van achteren bij een boulder" width="666" height="1000" loading="lazy"></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g7.jpg" alt="Loek reikt naar een greep in de schaduw" width="1066" height="1600" loading="lazy"></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g2.jpg" alt="Loek reikt naar een greep" width="733" height="1100" loading="lazy"></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g5.jpg" alt="Loek bij de crashpads" width="733" height="1100" loading="lazy"></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g6.jpg" alt="Loek staat voor een boulder" width="733" height="1100" loading="lazy"></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/hero.jpg" alt="Loek reikt hoog op een boulder" width="1199" height="1800" loading="lazy"></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g3.jpg" alt="Loek van bovenaf gezien" width="733" height="1100" loading="lazy"></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/portret.jpg" alt="Portret van Loek" width="600" height="900" loading="lazy"></a>
       </div>
     </section>
 
