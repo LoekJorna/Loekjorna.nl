@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=12">
   <script>
     // Verberg de hero heel even tot de intro start (max. 3 sec, voor de zekerheid)
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -55,7 +55,7 @@
       <div class="hero__intro">
         <p class="hero__lead">Bouldercontent, lifestyle en een beetje tech.<br>Eerlijk, creatief en altijd in beweging.</p>
         <div class="hero__actions">
-          <a href="mailto:loekjornamarketing@gmail.com?subject=Samenwerking%20met%20Loek%20Jorna" class="btn btn--light">Werk met mij samen</a>
+          <a href="#contact" class="btn btn--light">Werk met mij samen</a>
           <a href="#instagram" class="btn btn--ghost">Bekijk mijn content</a>
         </div>
       </div>
@@ -156,13 +156,58 @@
     <!-- ===== CONTACT ===== -->
     <section id="contact" class="contact">
       <div class="contact__panel">
-        <h2>Laten we samen iets maken.</h2>
-        <p>Een merk, een hal of een idee dat bij klimmers past? Stuur me een bericht, ik reageer meestal binnen een paar dagen.</p>
-        <div class="hero__actions">
-          <a href="mailto:loekjornamarketing@gmail.com?subject=Samenwerking%20met%20Loek%20Jorna" class="btn btn--light">loekjornamarketing@gmail.com</a>
-          <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener" class="btn btn--ghost">Instagram</a>
-          <a href="https://www.tiktok.com/@loek.jorna" target="_blank" rel="noopener" class="btn btn--ghost">TikTok</a>
+        <div class="contact__intro">
+          <h2>Laten we samen iets maken.</h2>
+          <p>Een merk, een hal of een idee dat bij klimmers past? Vul het formulier in, ik reageer meestal binnen een paar dagen.</p>
+          <div class="contact__direct">
+            <span>Liever direct?</span>
+            <a class="link" href="mailto:loekjornamarketing@gmail.com">loekjornamarketing@gmail.com</a>
+            <a class="link" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener">Instagram</a>
+            <a class="link" href="https://www.tiktok.com/@loek.jorna" target="_blank" rel="noopener">TikTok</a>
+          </div>
         </div>
+
+        <!-- Contactformulier: FormSubmit stuurt elk bericht naar loekjornamarketing@gmail.com -->
+        <form class="form" id="contact-form" action="https://formsubmit.co/loekjornamarketing@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Nieuw bericht via loekjorna.nl">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://loekjorna.nl/#bedankt">
+          <!-- Valstrik voor spambots: echte bezoekers zien dit veld niet -->
+          <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="form__row">
+            <label class="field">
+              <span>Naam</span>
+              <input type="text" name="naam" autocomplete="name" required>
+            </label>
+            <label class="field">
+              <span>E-mail</span>
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+          </div>
+          <div class="form__row">
+            <label class="field">
+              <span>Bedrijf of merk <em>(optioneel)</em></span>
+              <input type="text" name="bedrijf" autocomplete="organization">
+            </label>
+            <label class="field">
+              <span>Waarover?</span>
+              <select name="onderwerp">
+                <option>Samenwerking of sponsoring</option>
+                <option>Gear review</option>
+                <option>Boulderhal of event</option>
+                <option>Iets anders</option>
+              </select>
+            </label>
+          </div>
+          <label class="field">
+            <span>Bericht</span>
+            <textarea name="bericht" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--light form__submit">Verstuur bericht</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
@@ -176,7 +221,7 @@
   <script src="js/vendor/gsap.min.js"></script>
   <script src="js/vendor/ScrollTrigger.min.js"></script>
   <script src="js/vendor/SplitText.min.js"></script>
-  <script src="js/main.js?v=11"></script>
-  <script src="js/animations.js?v=11"></script>
+  <script src="js/main.js?v=12"></script>
+  <script src="js/animations.js?v=12"></script>
 </body>
 </html>

@@ -100,8 +100,8 @@ document.fonts.ready.then(() => {
     enter('.contact', [
       ['.contact__panel', { y: 60, duration: 1.1 }],
       ['.contact h2', blurIn, 0.25],
-      ['.contact__panel p', {}, 0.4],
-      ['.contact .btn', { y: 16, stagger: 0.08 }, 0.5],
+      ['.contact__intro p, .contact__direct', { stagger: 0.1 }, 0.4],
+      ['.form', { y: 30 }, 0.5],
     ]);
   });
 
