@@ -31,18 +31,5 @@ if (REELS.length) {
   });
 }
 
-// ===== Niche: korte uitleg bij elk onderwerp =====
-const desc = document.querySelector('.niche__desc');
-document.querySelectorAll('.niche__col li').forEach(li => {
-  li.tabIndex = 0;
-  const show = () => {
-    document.querySelectorAll('.niche__col li.is-active').forEach(x => x.classList.remove('is-active'));
-    li.classList.add('is-active');
-    desc.textContent = li.dataset.desc;
-  };
-  li.addEventListener('mouseenter', show);
-  li.addEventListener('focus', show);
-});
-
 // Jaartal in footer
 document.getElementById('year').textContent = new Date().getFullYear();

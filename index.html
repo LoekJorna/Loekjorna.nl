@@ -9,7 +9,7 @@
   <meta property="og:image" content="assets/img/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,15 +26,16 @@
       </div>
     </nav>
 
-    <!-- Grote foto (straks: video). Vervang door je eigen beeld in assets/img/ -->
-    <img class="hero__media" src="assets/img/over.jpg" alt="Loek zit op een boulder in het bos" width="1466" height="2200" fetchpriority="high">
-
-    <div class="hero__foot">
-      <div class="hero__intro">
-        <h1 id="top">Loek Jorna</h1>
+    <div class="hero__body">
+      <div class="hero__text">
+        <h1 id="top">Loek<br>Jorna</h1>
         <p class="lead">Bouldercontent, lifestyle en een beetje tech, voor 84K+ volgers op TikTok en Instagram.</p>
+        <a href="mailto:loekjornamarketing@gmail.com?subject=Samenwerking%20met%20Loek%20Jorna" class="button">Werk met mij samen</a>
       </div>
-      <a href="mailto:loekjornamarketing@gmail.com?subject=Samenwerking%20met%20Loek%20Jorna" class="button">Werk met mij samen</a>
+      <!-- Grote foto (straks: video). Vervang door je eigen beeld in assets/img/ -->
+      <div class="hero__photo">
+        <img class="hero__media" src="assets/img/over.jpg" alt="Loek zit op een boulder in het bos" width="1466" height="2200" fetchpriority="high">
+      </div>
     </div>
   </header>
 
@@ -54,15 +55,15 @@
 
     <!-- ===== OVER MIJ ===== -->
     <section id="over" class="about grid">
-      <ul class="about__facts">
-        <li>23 jaar</li>
-        <li>Klimt sinds zijn 10e</li>
-        <li>Nederland</li>
-      </ul>
       <div class="about__text">
         <h2 class="about__title">Over mij</h2>
         <p class="about__lede"><img class="about__portrait" src="assets/img/portret.jpg" alt="Portret van Loek" width="600" height="900"><strong>Ik ben Loek Jorna, 23 jaar,</strong> en ik maak al mijn hele leven video's. Sinds mijn tiende klim en boulder ik.</p>
         <p class="about__more">Ik daag mezelf graag creatief uit, en met mijn video's wil ik mensen inspireren om ook die eerste greep te pakken. Vooral jongeren wil ik laten zien dat ze trots mogen zijn op wat ze zelf maken. Daarom past deze quote van Picasso zo goed bij me:</p>
+        <ul class="about__facts">
+          <li>23 jaar</li>
+          <li>Klimt sinds zijn 10e</li>
+          <li>Nederland</li>
+        </ul>
         <blockquote class="about__quote">
           <p>“Every child is an artist. The problem is how to remain an artist once we grow up.”</p>
           <cite>Pablo Picasso</cite>
@@ -73,40 +74,39 @@
     <!-- ===== NICHE ===== -->
     <section id="niche" class="niche grid">
       <h2 class="niche__title">Mijn niche</h2>
-      <div class="niche__col">
+      <div class="niche__col niche__col--green">
         <h3>Bouldercontent</h3>
         <ul>
-          <li data-desc="Van de eerste poging tot de top, eerlijk in beeld.">Sends en fails</li>
-          <li data-desc="Korte uitleg die je direct op de mat kunt proberen.">Techniek en tips</li>
-          <li data-desc="Jullie vragen over klimmen, gewoon beantwoord.">Klimvragen</li>
-          <li data-desc="Van de hal in de stad tot de rotsen in het bos.">Hal en buiten</li>
-          <li data-desc="Schoenen, chalk en kleding, getest aan de wand.">Gear reviews</li>
-          <li data-desc="Wat er speelt in de boulderwereld.">Sportnieuws</li>
+          <li>Sends en fails</li>
+          <li>Techniek en tips</li>
+          <li>Klimvragen</li>
+          <li>Hal en buiten</li>
+          <li>Gear reviews</li>
+          <li>Sportnieuws</li>
         </ul>
         <p class="niche__sum">Klimmen zoals het echt gaat: tips, fails, sends en alles daartussen.</p>
       </div>
-      <div class="niche__col">
+      <div class="niche__col niche__col--vanilla">
         <h3>Lifestyle</h3>
         <ul>
-          <li data-desc="Hoe klimmen in een gewone week past.">Mijn dag</li>
-          <li data-desc="Video's die ik maak om mezelf uit te dagen.">Creatieve projecten</li>
-          <li data-desc="Erop uit naar nieuwe plekken en rotsen.">Klimtrips</li>
-          <li data-desc="Laten zien dat je trots mag zijn op wat je maakt.">Jongeren inspireren</li>
-          <li data-desc="De NL Boulder Community, online en in de hal.">Community</li>
+          <li>Mijn dag</li>
+          <li>Creatieve projecten</li>
+          <li>Klimtrips</li>
+          <li>Jongeren inspireren</li>
+          <li>Community</li>
         </ul>
         <p class="niche__sum">Het leven rond het klimmen, met een creatieve blik.</p>
       </div>
-      <div class="niche__col">
+      <div class="niche__col niche__col--blue">
         <h3>Tech</h3>
         <ul>
-          <li data-desc="Mijn werkplek, en hoe ik daar video's maak.">Setup en werkplek</li>
-          <li data-desc="Hoe een video van idee tot post komt.">Filmen en editen</li>
-          <li data-desc="Handige gadgets, eerlijk getest.">Gadgets</li>
-          <li data-desc="Gezond werken naast het klimmen.">Ergonomie</li>
+          <li>Setup en werkplek</li>
+          <li>Filmen en editen</li>
+          <li>Gadgets</li>
+          <li>Ergonomie</li>
         </ul>
         <p class="niche__sum">Een beetje tech: de spullen waarmee ik maak wat je ziet.</p>
       </div>
-      <p class="niche__desc" aria-live="polite"></p>
     </section>
 
     <!-- ===== WERK: LAATSTE REELS ===== -->
