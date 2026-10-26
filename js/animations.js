@@ -85,12 +85,6 @@ document.fonts.ready.then(() => {
       ['.niche__card', { y: 60, stagger: 0.12, duration: 1.1 }, 0.2],
     ]);
 
-    enter('.work', [
-      ['.work h2', blurIn],
-      ['.work .link', {}, 0.1],
-      ['.reel', { y: 50, stagger: 0.1 }, 0.2],
-    ]);
-
     enter('.brands', [
       ['.brands h2', blurIn],
       ['.brands .section-head p', {}, 0.1],
@@ -121,5 +115,5 @@ document.fonts.ready.then(() => {
     clearTimeout(refreshTimer);
     refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 300);
   });
-  ['reels-grid', 'posts-grid'].forEach(id => ro.observe(document.getElementById(id)));
+  ro.observe(document.getElementById('posts-grid'));
 });

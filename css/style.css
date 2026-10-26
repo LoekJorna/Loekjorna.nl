@@ -195,23 +195,9 @@ body::after {
 .niche__body ul { display: flex; flex-wrap: wrap; gap: 6px; }
 .niche__body li { border: 1px solid var(--line); background: var(--glass); backdrop-filter: blur(8px); border-radius: 999px; padding: 4px 12px; font-size: var(--step-small); }
 
-/* ===== Reels ===== */
-.work { position: relative; padding: var(--section) 0; isolation: isolate; }
-.work::before {
-  content: ''; position: absolute; inset: 10% 0 0; z-index: -1;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(212, 22, 31, 0.35), transparent 70%);
-}
-.work .section-head { padding-inline: var(--m); }
-.work__strip {
-  display: flex; gap: 16px; justify-content: safe center;
-  overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
-  padding-inline: var(--m);
-}
-.work__strip::-webkit-scrollbar { display: none; }
-.reel { flex: 0 0 min(370px, 86vw); scroll-snap-align: center; border-radius: 18px; overflow: hidden; background: #fff; }
+/* ===== Instagram-embeds ===== */
+.reel { border-radius: 18px; overflow: hidden; background: #fff; }
 .reel .instagram-media { margin: 0 !important; min-width: 0 !important; width: 100% !important; border-radius: 0 !important; box-shadow: none !important; border: 0 !important; } /* taste-skill-ignore: zet de schaduw van Instagram juist uit */
-.reel--placeholder { position: relative; aspect-ratio: 9 / 16; display: block; }
-.reel--placeholder img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ===== Merken ===== */
 .brands { padding: var(--section) var(--m); }

@@ -1,12 +1,3 @@
-// ===== JE LAATSTE 3 REELS =====
-// Plak hier de links van je nieuwste reels (nieuwste eerst).
-// Zolang de lijst leeg is, tonen we foto's die naar je Instagram linken.
-const REELS = [
-  'https://www.instagram.com/reel/De1zuY3xsWe/',
-  'https://www.instagram.com/reel/DLR-MgWNsZ2/',
-  'https://www.instagram.com/reel/DakYSXoAOtw/',
-];
-
 // ===== RELEVANTE INSTAGRAM-POSTS =====
 // Posts voor het kopje "Op Instagram" (bouldercontent). Links van een post of reel mogen allebei.
 const POSTS = [
@@ -27,22 +18,10 @@ const embed = url => {
     <a href="${link}" target="_blank" rel="noopener">Bekijk deze post op Instagram</a></blockquote></div>`;
 };
 
-const reelsGrid = document.getElementById('reels-grid');
 document.getElementById('posts-grid').innerHTML = POSTS.map(embed).join('');
-const fallbackImgs = ['assets/img/hal-1.jpg', 'assets/img/hal-klimmen.jpg', 'assets/img/hal-2.jpg'];
-
-if (REELS.length) {
-  reelsGrid.innerHTML = REELS.slice(0, 3).map(embed).join('');
-} else {
-  fallbackImgs.forEach(src => {
-    reelsGrid.insertAdjacentHTML('beforeend',
-      `<a class="reel reel--placeholder" href="https://www.instagram.com/loekjorna/reels/" target="_blank" rel="noopener">
-        <img src="${src}" alt="Bekijk de reels van Loek op Instagram" loading="lazy"></a>`);
-  });
-}
 
 // Officieel Instagram-script: maakt van elke blockquote een afspeelbare post of reel
-if (REELS.length || POSTS.length) {
+if (POSTS.length) {
   const s = document.createElement('script');
   s.src = 'https://www.instagram.com/embed.js';
   s.async = true;
