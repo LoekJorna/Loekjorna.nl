@@ -28,7 +28,6 @@ document.fonts.ready.then(() => {
       .from('.hero__burst', { scale: 0, rotation: -180, duration: 1.2, ease: 'back.out(1.7)' }, 0.3)
       .from(heroTitle.chars, { yPercent: 110, duration: 1.1, stagger: 0.035 }, 0.45)
       .from('.hero__sub', { autoAlpha: 0, y: 20, letterSpacing: '0.8em', duration: 1.2 }, 0.9)
-      .from('.hero__top > *', { autoAlpha: 0, y: -20, duration: 0.8, stagger: 0.1 }, 1)
       .from('.nav', { autoAlpha: 0, y: -30, duration: 0.8 }, 1.1)
       .from('.hero__scroll', { autoAlpha: 0, duration: 0.8 }, 1.4);
 
@@ -86,25 +85,11 @@ document.fonts.ready.then(() => {
     gsap.timeline({ scrollTrigger: { trigger: '.poster-title', start: 'top bottom', end: 'center 45%', scrub: 1 } })
       .from(rows[0], { xPercent: -45, ease: 'none' }, 0)
       .from(rows[1], { xPercent: 45, ease: 'none' }, 0);
-    gsap.from('.poster-title__script', {
-      scale: 0, rotation: -40, duration: 1.1, ease: 'elastic.out(1, 0.5)',
-      scrollTrigger: { trigger: '.poster-title', start: 'top 60%' },
-    });
 
     gsap.from('.reel', {
       y: 80, autoAlpha: 0, rotation: (i) => [-4, 0, 4][i % 3], duration: 1, stagger: 0.15, ease: 'power3.out',
       scrollTrigger: { trigger: '.reels__grid', start: 'top 80%' },
     });
-
-    // ----- 4. Full-bleed foto: inzoomen tijdens scrollen -----
-    gsap.fromTo('.bleed img', { scale: 1.3 }, {
-      scale: 1, ease: 'none',
-      scrollTrigger: { trigger: '.bleed', start: 'top bottom', end: 'bottom top', scrub: true },
-    });
-    const quote = SplitText.create('.bleed__quote', { type: 'words,chars', mask: 'words' });
-    gsap.timeline({ scrollTrigger: { trigger: '.bleed', start: 'center 70%' } })
-      .from('.bleed .label', { autoAlpha: 0, y: 15, duration: 0.6 })
-      .from(quote.chars, { yPercent: 110, duration: 0.8, stagger: 0.025, ease: 'power4.out' }, 0.1);
 
     // ----- 5. Instagram-feed: foto's onthullen als een gordijn -----
     gsap.set('.insta__grid a', { clipPath: 'inset(0 0 100% 0)' });
