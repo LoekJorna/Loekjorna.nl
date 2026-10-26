@@ -3,176 +3,195 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Loek Jorna — Climbing & Bouldering</title>
-  <meta name="description" content="Loek Jorna maakt content over klimmen, boulderen en sport. Bekijk de nieuwste reels of werk samen.">
-  <meta property="og:title" content="Loek Jorna — Climbing & Bouldering">
-  <meta property="og:image" content="assets/img/over.jpg">
+  <title>Loek Jorna — Bouldercontent, lifestyle en tech</title>
+  <meta name="description" content="Loek Jorna (23) maakt bouldercontent, lifestyle en een beetje tech voor 84K+ volgers. Werkte samen met Logitech, Flexispot en Boulderhal Sterk, en is ambassadeur van Klimwinkel.">
+  <meta property="og:title" content="Loek Jorna — Bouldercontent, lifestyle en tech">
+  <meta property="og:image" content="assets/img/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter+Tight:wght@400;500;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script>
-    // Verberg de hero heel even tot de intro-animatie start (max. 3 sec, voor de zekerheid)
-    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.documentElement.classList.add('anim-loading');
-      setTimeout(() => document.documentElement.classList.remove('anim-loading'), 3000);
-    }
-  </script>
 </head>
 <body>
 
-  <!-- Logo-symbool (zoals bij Trailbound) -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="burst" viewBox="0 0 100 100">
-      <g fill="currentColor">
-        <circle cx="50" cy="12" r="9"/>
-        <rect x="45" y="30" width="10" height="70" rx="5" transform="rotate(0 50 65)"/>
-        <rect x="45" y="30" width="10" height="70" rx="5" transform="rotate(60 50 65)"/>
-        <rect x="45" y="30" width="10" height="70" rx="5" transform="rotate(-60 50 65)"/>
-      </g>
-    </symbol>
-  </svg>
-
-  <!-- NAVIGATIE -->
-  <header class="nav">
-    <a href="#top" class="nav__logo"><svg><use href="#burst"/></svg>LOEK JORNA</a>
-    <button class="nav__toggle" aria-label="Menu openen" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav__links">
-      <a href="#bereik">Bereik</a>
-      <a href="#over">Over mij</a>
-      <a href="#reels">Reels</a>
-      <a href="#samenwerken">Samenwerken</a>
-      <a href="#contact" class="pill">Contact</a>
+  <!-- ===== HERO: de filmstrip ===== -->
+  <header class="hero">
+    <nav class="hero__nav" aria-label="Hoofdmenu">
+      <a href="#top" class="wordmark">Loek Jorna</a>
+      <div class="hero__links">
+        <a href="#over">Over mij</a>
+        <a href="#werk">Werk</a>
+        <a href="#merken">Merken</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
+
+    <!-- Filmstrip: het frame in het midden licht op. Scroll of swipe opzij. -->
+    <div class="strip" id="strip" tabindex="0" aria-label="Filmstrip met foto's van Loek, scroll opzij">
+      <figure class="frame"><img src="assets/img/g2.jpg" alt="Loek reikt naar een greep op een grote boulder" width="733" height="1100"><figcaption>De eerste greep</figcaption></figure>
+      <figure class="frame"><img src="assets/img/g4.jpg" alt="Loek bestudeert een boulder" width="733" height="1100"><figcaption>De lijn lezen</figcaption></figure>
+      <figure class="frame"><img src="assets/img/tiktok.jpg" alt="Loek hangt ondersteboven met een heel hook" width="666" height="1000"><figcaption>Heel hook</figcaption></figure>
+      <figure class="frame"><img src="assets/img/g1.jpg" alt="Loek klimt met een spotter eronder" width="879" height="1100"><figcaption>Met spotter</figcaption></figure>
+      <figure class="frame"><img src="assets/img/insta.jpg" alt="Loek van achteren bij een boulder, handen op zijn pet" width="666" height="1000"><figcaption>Nog één poging</figcaption></figure>
+      <figure class="frame frame--lead"><img src="assets/img/hero.jpg" alt="Loek reikt hoog op een boulder in het bos" width="1199" height="1800"><figcaption>Reach</figcaption></figure>
+      <figure class="frame"><img src="assets/img/over.jpg" alt="Loek zit op een boulder in het bos" width="1466" height="2200"><figcaption>Rustmoment</figcaption></figure>
+      <figure class="frame"><img src="assets/img/g3.jpg" alt="Loek van bovenaf gezien tijdens het klimmen" width="733" height="1100"><figcaption>Van bovenaf</figcaption></figure>
+      <figure class="frame"><img src="assets/img/g7.jpg" alt="Loek reikt naar een greep in de schaduw" width="1066" height="1600"><figcaption>Schaduwspel</figcaption></figure>
+      <figure class="frame"><img src="assets/img/g6.jpg" alt="Loek staat voor een boulder" width="733" height="1100"><figcaption>Voor de start</figcaption></figure>
+      <figure class="frame"><img src="assets/img/portret.jpg" alt="Portret van Loek in een grijze hoodie" width="600" height="900"><figcaption>Loek</figcaption></figure>
+      <figure class="frame"><img src="assets/img/g5.jpg" alt="Loek in een grijze hoodie bij de crashpads" width="733" height="1100"><figcaption>Crashpads</figcaption></figure>
+    </div>
+
+    <div class="hero__foot">
+      <div class="hero__intro">
+        <h1 id="top">Loek Jorna,<br>bouldercreator</h1>
+        <p class="lead">Bouldercontent, lifestyle en een beetje tech, voor 84K+ volgers op TikTok en Instagram.</p>
+      </div>
+      <a href="mailto:loekjornamarketing@gmail.com?subject=Samenwerking%20met%20Loek%20Jorna" class="button">Werk met mij samen</a>
+    </div>
   </header>
 
-  <main id="top">
+  <main>
 
-    <!-- HERO -->
-    <section class="hero">
-      <img class="hero__bg" src="assets/img/over.jpg" alt="Loek zittend op een boulder in het bos">
-      <div class="hero__center">
-        <svg class="hero__burst"><use href="#burst"/></svg>
-        <h1>LOEK JORNA</h1>
-        <p class="hero__sub">CLIMB · CREATE · REPEAT</p>
-      </div>
-      <a href="#over" class="hero__scroll">SCROLL ↓</a>
+    <!-- ===== BEREIK ===== -->
+    <section id="bereik" class="stats grid">
+      <h2 class="stats__title">Het bereik</h2>
+      <dl class="stats__list">
+        <div class="stat"><dt class="stat__num" data-count="84" data-suffix="K+">84K+</dt><dd>volgers op TikTok en Instagram samen.</dd></div>
+        <div class="stat"><dt class="stat__num" data-count="80.3" data-decimals="1" data-suffix="K">80,3K</dt><dd>volgers op TikTok, waar boulderen en lifestyle samenkomen.</dd></div>
+        <div class="stat"><dt class="stat__num" data-count="4" data-suffix="M+">4M+</dt><dd>likes op mijn TikTok-video's.</dd></div>
+        <div class="stat"><dt class="stat__num" data-count="4066">4.066</dt><dd>volgers op Instagram, voor het verhaal achter de video's.</dd></div>
+      </dl>
+      <img class="stats__img" src="assets/img/g3.jpg" alt="Loek van bovenaf gezien op een boulder" width="733" height="1100" loading="lazy">
     </section>
 
-    <!-- BEREIK IN CIJFERS -->
-    <!-- Cijfers bijwerken? Pas data-count én het getal ertussen aan. -->
-    <section id="bereik" class="stats">
-      <div class="stats__head">
-        <p class="label">HET BEREIK</p>
-        <h2 class="wide">REACH <span class="script">in</span> NUMBERS</h2>
+    <!-- ===== OVER MIJ ===== -->
+    <section id="over" class="about grid">
+      <ul class="about__facts">
+        <li>23 jaar</li>
+        <li>Klimt sinds zijn 10e</li>
+        <li>Nederland</li>
+      </ul>
+      <div class="about__text">
+        <h2 class="about__title">Over mij</h2>
+        <p class="about__lede"><img class="about__portrait" src="assets/img/portret.jpg" alt="Portret van Loek" width="600" height="900"><strong>Ik ben Loek Jorna, 23 jaar,</strong> en ik maak al mijn hele leven video's. Sinds mijn tiende klim en boulder ik.</p>
+        <p class="about__more">Ik daag mezelf graag creatief uit, en met mijn video's wil ik mensen inspireren om ook die eerste greep te pakken. Vooral jongeren wil ik laten zien dat ze trots mogen zijn op wat ze zelf maken. Daarom past deze quote van Picasso zo goed bij me:</p>
+        <blockquote class="about__quote">
+          <p>“Every child is an artist. The problem is how to remain an artist once we grow up.”</p>
+          <cite>Pablo Picasso</cite>
+        </blockquote>
       </div>
-      <div class="stats__grid">
-        <div class="stat">
-          <span class="stat__num" data-count="84" data-suffix="K+">84K+</span>
-          <span class="stat__label">Volgers totaal</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num" data-count="4" data-suffix="M+">4M+</span>
-          <span class="stat__label">Likes op TikTok</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num" data-count="80.3" data-decimals="1" data-suffix="K">80,3K</span>
-          <span class="stat__label">TikTok-volgers</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num" data-count="4066">4.066</span>
-          <span class="stat__label">Instagram-volgers</span>
-        </div>
-      </div>
-      <p class="stats__note">NL Boulder Community · TikTok &amp; Instagram · stand oktober 2026</p>
     </section>
 
-    <!-- STATEMENT / OVER MIJ -->
-    <section id="over" class="statement">
-      <div class="statement__text">
-        <p class="statement__small">work hard but,</p>
-        <h2 class="statement__big">enjoy the climb too.</h2>
-        <div class="statement__body">
-          <p>Hoi, ik ben Loek. Ik klim, ik boulder en ik neem je overal mee naartoe: van de hal tot de rotsen in het bos. Ik laat zien hoe het écht gaat, met de tips, de fails, de sends en alles daartussen.</p>
-          <p>Op mijn kanalen beantwoord ik jullie klimvragen, test ik nieuwe gear en praat ik over het sportnieuws waar iedereen het over heeft.</p>
-        </div>
+    <!-- ===== NICHE ===== -->
+    <section id="niche" class="niche grid">
+      <h2 class="niche__title">Mijn niche</h2>
+      <div class="niche__col">
+        <h3>Bouldercontent</h3>
+        <ul>
+          <li data-desc="Van de eerste poging tot de top, eerlijk in beeld.">Sends en fails</li>
+          <li data-desc="Korte uitleg die je direct op de mat kunt proberen.">Techniek en tips</li>
+          <li data-desc="Jullie vragen over klimmen, gewoon beantwoord.">Klimvragen</li>
+          <li data-desc="Van de hal in de stad tot de rotsen in het bos.">Hal en buiten</li>
+          <li data-desc="Schoenen, chalk en kleding, getest aan de wand.">Gear reviews</li>
+          <li data-desc="Wat er speelt in de boulderwereld.">Sportnieuws</li>
+        </ul>
+        <p class="niche__sum">Klimmen zoals het echt gaat: tips, fails, sends en alles daartussen.</p>
       </div>
-      <img class="statement__img" src="assets/img/portret.jpg" alt="Portret van Loek in een grijze hoodie">
+      <div class="niche__col">
+        <h3>Lifestyle</h3>
+        <ul>
+          <li data-desc="Hoe klimmen in een gewone week past.">Mijn dag</li>
+          <li data-desc="Video's die ik maak om mezelf uit te dagen.">Creatieve projecten</li>
+          <li data-desc="Erop uit naar nieuwe plekken en rotsen.">Klimtrips</li>
+          <li data-desc="Laten zien dat je trots mag zijn op wat je maakt.">Jongeren inspireren</li>
+          <li data-desc="De NL Boulder Community, online en in de hal.">Community</li>
+        </ul>
+        <p class="niche__sum">Het leven rond het klimmen, met een creatieve blik.</p>
+      </div>
+      <div class="niche__col">
+        <h3>Tech</h3>
+        <ul>
+          <li data-desc="Mijn werkplek, en hoe ik daar video's maak.">Setup en werkplek</li>
+          <li data-desc="Hoe een video van idee tot post komt.">Filmen en editen</li>
+          <li data-desc="Handige gadgets, eerlijk getest.">Gadgets</li>
+          <li data-desc="Gezond werken naast het klimmen.">Ergonomie</li>
+        </ul>
+        <p class="niche__sum">Een beetje tech: de spullen waarmee ik maak wat je ziet.</p>
+      </div>
+      <p class="niche__desc" aria-live="polite"></p>
     </section>
 
-    <!-- REELS -->
-    <section id="reels" class="reels">
-      <div class="poster-title">
-        <span class="poster-title__row">LAATSTE</span>
-        <span class="poster-title__row">REELS</span>
-      </div>
-      <p class="label">NIEUW OP @LOEKJORNA</p>
-
+    <!-- ===== WERK: LAATSTE REELS ===== -->
+    <section id="werk" class="work">
+      <h2 class="work__title">Laatste reels</h2>
       <!-- De reels worden gevuld door js/main.js (zie REELS bovenaan dat bestand) -->
-      <div class="reels__grid" id="reels-grid"></div>
-
-      <div class="reels__cta">
-        <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener" class="pill pill--orange">Volg op Instagram</a>
-        <a href="https://www.tiktok.com/@loek.jorna" target="_blank" rel="noopener" class="pill">Volg op TikTok</a>
+      <div class="work__strip" id="reels-grid"></div>
+      <div class="work__facts grid">
+        <p class="work__name">Nieuw op Instagram <span>bouldercontent en lifestyle</span></p>
+        <p class="work__where">Ook op TikTok, @loek.jorna</p>
+        <a class="link" href="https://www.instagram.com/loekjorna/reels/" target="_blank" rel="noopener">Alle reels bekijken →</a>
       </div>
     </section>
 
-    <!-- INSTAGRAM-FEED -->
-    <section id="instagram" class="insta">
-      <div class="insta__head">
-        <div>
-          <p class="label">OP INSTAGRAM</p>
-          <h2 class="wide">@LOEKJORNA</h2>
+    <!-- ===== MERKEN ===== -->
+    <section id="merken" class="brands">
+      <div class="brands__board">
+        <div class="tile tile--head">
+          <h2>Merken waar ik mee werkte</h2>
         </div>
-        <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener" class="pill">Volg op Instagram</a>
-      </div>
-      <div class="insta__grid">
-        <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/hero.jpg" alt="Loek reikt naar een greep op een grote boulder" loading="lazy"></a>
-        <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/tiktok.jpg" alt="Loek hangt ondersteboven met een heel hook" loading="lazy"></a>
-        <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/insta.jpg" alt="Loek van achteren bij een boulder" loading="lazy"></a>
-        <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g3.jpg" alt="Loek van bovenaf gezien tijdens het klimmen" loading="lazy"></a>
-        <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g1.jpg" alt="Loek klimt met een spotter eronder" loading="lazy"></a>
-        <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g5.jpg" alt="Loek in een grijze hoodie bij de crashpads" loading="lazy"></a>
+        <div class="tile"><img src="assets/logos/logitech.svg" alt="Logitech" class="logo logo--logitech"></div>
+        <div class="tile"><img src="assets/logos/flexispot.png" alt="Flexispot" class="logo logo--flexispot"></div>
+        <div class="tile"><img src="assets/logos/sterk.svg" alt="Boulderhal Sterk" class="logo logo--sterk"></div>
+        <div class="tile tile--ambassador"><img src="assets/logos/klimwinkel.webp" alt="Klimwinkel" class="logo logo--klimwinkel"><span>Ambassadeur</span></div>
       </div>
     </section>
 
-    <!-- SAMENWERKEN -->
-    <section id="samenwerken" class="collab">
-      <div class="collab__head">
-        <p class="label">VOOR MERKEN</p>
-        <h2 class="wide">LET'S <span class="script">work</span> TOGETHER</h2>
-        <p class="collab__lead">Met 84K+ volgers en 4M+ likes bereik ik een betrokken publiek van klimmers, boulderaars en sportfans. Samen maken we content die niet voelt als reclame.</p>
-        <a href="mailto:loekjornamarketing@gmail.com" class="pill pill--orange collab__cta">Stuur een voorstel</a>
+    <!-- ===== INSTAGRAM ===== -->
+    <section id="instagram" class="sheet">
+      <div class="sheet__head grid">
+        <h2>Op Instagram</h2>
+        <p>Foto's van de rotsen, de hal en alles daartussen. Elke week nieuw op <a class="link" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener">@loekjorna</a>.</p>
       </div>
-      <ol class="collab__list">
-        <li><span class="num">01</span><div><h3>Gesponsorde video's</h3><p>Je product echt getest aan de wand, in mijn eigen stijl.</p></div></li>
-        <li><span class="num">02</span><div><h3>Gear reviews</h3><p>Eerlijke reviews van klimschoenen, chalk, kleding en meer.</p></div></li>
-        <li><span class="num">03</span><div><h3>Hallen & events</h3><p>Content over jouw boulderhal, wedstrijd of event.</p></div></li>
-      </ol>
+      <div class="sheet__grid">
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g1.jpg" alt="Loek klimt met een spotter eronder" width="879" height="1100" loading="lazy"><span>Met spotter</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g4.jpg" alt="Loek bestudeert een boulder" width="733" height="1100" loading="lazy"><span>De lijn lezen</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/tiktok.jpg" alt="Loek hangt ondersteboven met een heel hook" width="666" height="1000" loading="lazy"><span>Heel hook</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/over.jpg" alt="Loek zit op een boulder in het bos" width="1466" height="2200" loading="lazy"><span>Rustmoment</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/insta.jpg" alt="Loek van achteren bij een boulder" width="666" height="1000" loading="lazy"><span>Nog één poging</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g7.jpg" alt="Loek reikt naar een greep in de schaduw" width="1066" height="1600" loading="lazy"><span>Schaduwspel</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g2.jpg" alt="Loek reikt naar een greep" width="733" height="1100" loading="lazy"><span>De eerste greep</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g5.jpg" alt="Loek bij de crashpads" width="733" height="1100" loading="lazy"><span>Crashpads</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g6.jpg" alt="Loek staat voor een boulder" width="733" height="1100" loading="lazy"><span>Voor de start</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/hero.jpg" alt="Loek reikt hoog op een boulder" width="1199" height="1800" loading="lazy"><span>Reach</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/g3.jpg" alt="Loek van bovenaf gezien" width="733" height="1100" loading="lazy"><span>Van bovenaf</span></a>
+        <a class="tile-img" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener"><img src="assets/img/portret.jpg" alt="Portret van Loek" width="600" height="900" loading="lazy"><span>Loek</span></a>
+      </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-      <img class="contact__bg" src="assets/img/g2.jpg" alt="" loading="lazy">
-      <div class="contact__inner">
-        <p class="label label--light">CONTACT</p>
-        <h2 class="wide">GET <span class="script">in</span> TOUCH</h2>
-        <a href="mailto:loekjornamarketing@gmail.com" class="pill pill--big">loekjornamarketing@gmail.com</a>
-        <div class="contact__socials">
-          <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener">INSTAGRAM</a>
-          <a href="https://www.tiktok.com/@loek.jorna" target="_blank" rel="noopener">TIKTOK</a>
-        </div>
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact grid">
+      <p class="contact__line">Een merk, een hal of een idee dat bij klimmers past? Laten we samen iets moois maken.</p>
+      <img class="contact__img" src="assets/img/portret.jpg" alt="Portret van Loek" width="600" height="900" loading="lazy">
+      <div class="contact__links">
+        <h2>Samenwerken?</h2>
+        <a class="link" href="mailto:loekjornamarketing@gmail.com?subject=Samenwerking%20met%20Loek%20Jorna">loekjornamarketing@gmail.com</a>
+        <a class="link" href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener">Instagram, @loekjorna</a>
+        <a class="link" href="https://www.tiktok.com/@loek.jorna" target="_blank" rel="noopener">TikTok, @loek.jorna</a>
+        <p class="contact__note">Nederland. Ik reageer meestal binnen een paar dagen.</p>
       </div>
     </section>
 
   </main>
 
   <footer class="footer">
-    <span><svg><use href="#burst"/></svg>LOEK JORNA</span>
-    <span>© <span id="year"></span></span>
-    <span>GO BEYOND</span>
+    <p class="footer__what">Bouldercontent door Loek Jorna</p>
+    <p class="footer__links">
+      <a href="https://www.instagram.com/loekjorna/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@loek.jorna" target="_blank" rel="noopener">TikTok</a>
+      <a href="mailto:loekjornamarketing@gmail.com">E-mail</a>
+    </p>
+    <p class="footer__year">© <span id="year">2026</span></p>
   </footer>
 
   <script src="js/vendor/gsap.min.js"></script>
